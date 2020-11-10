@@ -2,7 +2,7 @@ const discord = require ('discord.js');
 var bot = new discord.Client();
 const token = 'TOKEN';
 const prefix = '!';
-var version = '0.9.1 Pre-release';
+var version = '0.9 Pre-release';
 const recentlyUsed = new Set();
 
 //czarna lista
@@ -12,6 +12,20 @@ let Words2 = [prefix + "porn-vid"];
 let Words3 = [prefix + "jasnychuj"];
 let Words4 = [prefix + "chujwie"];
 let Words5 = [prefix + "pesa"];
+//ilość zdjęc
+let ilosc1 = 21 //buły
+let ilosc2 = 25 //szopy
+let ilosc3 = 55 //kafo
+let ilosc4 = 53 //kibel, en57
+let ilosc5 = 15 //eu07
+let ilosc6 = 18 //impuls
+let ilosc7 = 5 //et41
+let ilosc8 = 11 //byczq
+let ilosc9 = 8 //pies
+let ilosc10 = 6 //kot
+//let ilosc11 =  //weglarka
+//let ilosc12 =  //ep09
+//let ilosc13 = //stonka
 
 //czarnalista
 //lenny
@@ -49,7 +63,7 @@ bot.on("message", (message) => {
  message.delete();
  }
 });
-//sprawdzanie NSFW
+//sprawdzanie NSFW i usuwanie 
 bot.on("message", (message) => {
 	if (message.channel.nsfw) {
   //message.channel.send('ń NSFW');
@@ -133,7 +147,7 @@ bot.on('message', message => {
         }
        ],
        footer: {
-        text: 'Autorzy: MrTalon63#1631 & wojtasss298#5421',
+        text: 'Autorzy: MrTalon63#1180 & wojtasss298#5421',
       },
   }
   })
@@ -148,11 +162,11 @@ bot.on('message', message => {
           color: 0x2ed32e,
           fields: [{
               name: "Wsparcie",
-              value: "Chcesz nam pomóc? \nMożesz to zrobić przez wysłanie nam większej ilości obrazków. \nWyślij je do **MrTalon63#1631** lub **wojtasss298#5421**, a po jakimś czasie może zostaną dodane!"
+              value: "Chcesz nam pomóc? \nMożesz to zrobić przez wysłanie nam większej ilości obrazków. \nWyślij je do **MrTalon63#1180** lub **wojtasss298#5421**, a po jakimś czasie może zostaną dodane!"
         }
        ],
        footer: {
-        text: 'Autorzy: MrTalon63#1631 & wojtasss298#5421',
+        text: 'Autorzy: MrTalon63#1180 & wojtasss298#5421',
       },
   }
   })
@@ -171,7 +185,7 @@ bot.on('message', message => {
         }
        ],
        footer: {
-        text: 'Autorzy: MrTalon63#1631 & wojtasss298#5421',
+        text: 'Autorzy: MrTalon63#1180 & wojtasss298#5421',
       },
   }
   })
@@ -190,7 +204,7 @@ bot.on('message', message => {
         }
        ],
        footer: {
-        text: 'Autorzy: MrTalon63#1631 & wojtasss298#5421',
+        text: 'Autorzy: MrTalon63#1180 & wojtasss298#5421',
       },
   }
   })
@@ -214,7 +228,7 @@ bot.on('message', message => {
         }
        ],
        footer: {
-        text: 'Autorzy: MrTalon63#1631 & wojtasss298#5421',
+        text: 'Autorzy: MrTalon63#1180 & wojtasss298#5421',
       },
   }
   })
@@ -233,7 +247,7 @@ bot.on('message', message => {
         }
        ],
        footer: {
-        text: 'Autorzy: MrTalon63#1631 & wojtasss298#5421',
+        text: 'Autorzy: MrTalon63#1180 & wojtasss298#5421',
       },
   }
   })
@@ -252,7 +266,7 @@ bot.on('message', message => {
         }
        ],
        footer: {
-         text: 'Autorzy: MrTalon63#1631 & wojtasss298#5421',
+         text: 'Autorzy: MrTalon63#1180 & wojtasss298#5421',
        },
   }
   })
@@ -268,7 +282,7 @@ bot.on ("message", (message) => {
   return;
   }
   if (message.content.startsWith (prefix + "buły")) {
-      number = 21;
+      number = ilosc1;
       imageNumber = Math.floor (Math.random() * (number - 1 + 1)) + 1;
       message.channel.send ( {files: ["img/buly/" + imageNumber + ".jpg"]} )
   }
@@ -287,7 +301,7 @@ bot.on ("message", (message) => {
   if (message.author.bot) return;
 
   if (message.content.startsWith (prefix + "szop")) {
-    number = 25;
+    number = ilosc2;
     imageNumber = Math.floor (Math.random() * (number - 1 + 1)) + 1;
     message.channel.send ( {files: ["img/szop/" + imageNumber + ".jpg"]} )
   }
@@ -299,7 +313,7 @@ bot.on ("message", (message) => {
   if (message.author.bot) return;
 
   if (message.content.startsWith (prefix + "kafo")) {
-    number = 55;
+    number = ilosc3;
     imageNumber = Math.floor (Math.random() * (number - 1 + 1)) + 1;
     message.channel.send ( {files: ["img/szopu/" + imageNumber + ".jpg"]} )
   }
@@ -311,7 +325,7 @@ bot.on ("message", (message) => {
   if (message.author.bot) return;
 
   if (message.content.startsWith (prefix + "en57")) {
-    number = 52;
+    number = ilosc4;
     imageNumber = Math.floor (Math.random() * (number - 1 + 1)) + 1;
     message.channel.send ( {files: ["img/en57/" + imageNumber + ".jpg"]} )
   }
@@ -322,7 +336,7 @@ bot.on ("message", (message) => {
   if (message.author.bot) return;
 
   if (message.content.startsWith (prefix + "kibel")) {
-    number = 52;
+    number = ilosc4;
     imageNumber = Math.floor (Math.random() * (number - 1 + 1)) + 1;
     message.channel.send ( {files: ["img/en57/" + imageNumber + ".jpg"]} )
   }
@@ -334,7 +348,7 @@ bot.on ("message", (message) => {
   if (message.author.bot) return;
 
   if (message.content.startsWith (prefix + "eu07")) {
-    number = 14;
+    number = ilosc5;
     imageNumber = Math.floor (Math.random() * (number - 1 + 1)) + 1;
     message.channel.send ( {files: ["img/eu07/" + imageNumber + ".jpg"]} )
   }
@@ -346,7 +360,7 @@ bot.on ("message", (message) => {
   if (message.author.bot) return;
 
   if (message.content.startsWith (prefix + "impuls")) {
-    number = 18;
+    number = ilosc6;
     imageNumber = Math.floor (Math.random() * (number - 1 + 1)) + 1;
     message.channel.send ( {files: ["img/impuls/" + imageNumber + ".jpg"]} )
   }
@@ -358,9 +372,21 @@ bot.on ("message", (message) => {
   if (message.author.bot) return;
 
   if (message.content.startsWith (prefix + "pesa")) {
-    message.channel.send ( {files: ["img/pesa/1.JPG"]} )
+    message.channel.send ( {files: ["img/pesa/1.png"]} )
   }
 }); 
+
+//węglarka
+bot.on ("message", (message) => {
+
+  if (message.author.bot) return;
+
+  if (message.content.startsWith (prefix + "węglarka")) {
+    number = "ilosc11";
+    imageNumber = Math.floor (Math.random() * (number - 1 + 1)) + 1;
+    message.channel.send ( {files: ["img/weng/" + imageNumber + ".jpg"]} )
+  }
+});
 
 //et41
 bot.on ("message", (message) => {
@@ -368,7 +394,7 @@ bot.on ("message", (message) => {
   if (message.author.bot) return;
 
   if (message.content.startsWith (prefix + "et41")) {
-    number = 5;
+    number = ilosc7;
     imageNumber = Math.floor (Math.random() * (number - 1 + 1)) + 1;
     message.channel.send ( {files: ["img/et41/" + imageNumber + ".jpg"]} )
   }
@@ -380,7 +406,7 @@ bot.on ("message", (message) => {
   if (message.author.bot) return;
 
   if (message.content.startsWith (prefix + "et22")) {
-    number = 10;
+    number = ilosc8;
     imageNumber = Math.floor (Math.random() * (number - 1 + 1)) + 1;
     message.channel.send ( {files: ["img/et22/" + imageNumber + ".jpg"]} )
   }
@@ -390,7 +416,7 @@ bot.on ("message", (message) => {
   if (message.author.bot) return;
 
   if (message.content.startsWith (prefix + "byk")) {
-    number = 10;
+    number = ilosc8;
     imageNumber = Math.floor (Math.random() * (number - 1 + 1)) + 1;
     message.channel.send ( {files: ["img/et22/" + imageNumber + ".jpg"]} )
   }
@@ -402,7 +428,7 @@ bot.on ("message", (message) => {
   if (message.author.bot) return;
 
   if (message.content.startsWith (prefix + "pies")) {
-    number = 8;
+    number = ilosc9;
     imageNumber = Math.floor (Math.random() * (number - 1 + 1)) + 1;
     message.channel.send ( {files: ["img/pies/" + imageNumber + ".jpg"]} )
   }
@@ -414,7 +440,7 @@ bot.on ("message", (message) => {
   if (message.author.bot) return;
 
   if (message.content.startsWith (prefix + "kot")) {
-    number = 6;
+    number = ilosc10;
     imageNumber = Math.floor (Math.random() * (number - 1 + 1)) + 1;
     message.channel.send ( {files: ["img/kot/" + imageNumber + ".jpg"]} )
   }
